@@ -9,7 +9,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         response = super().list(request, *args, **kwargs)
-        response.data['url'] = 'https://ubiquitous-guacamole-7pwpvqx5pwphx5w-8000.app.github.dev'
+        response.data['url'] = 'https://ubiquitous-guacamole-7pwpvqx5pwphx5wj-8000.app.github.dev'
         return response
 
 class TeamViewSet(viewsets.ModelViewSet):
