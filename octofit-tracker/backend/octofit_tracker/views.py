@@ -1,5 +1,5 @@
-from rest_framework import viewsets
-from rest_framework.response import Response
+from rest_framework import viewsets # type: ignore
+from rest_framework.response import Response # type: ignore
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from .models import User, Team, Activity, Leaderboard, Workout
 

@@ -1,9 +1,9 @@
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand # type: ignore
 from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
-from django.conf import settings
-from pymongo import MongoClient
+from django.conf import settings # type: ignore
+from pymongo import MongoClient # type: ignore
 from datetime import timedelta
-from bson import ObjectId
+from bson import ObjectId # type: ignore
 
 class Command(BaseCommand):
     help = 'Populate the database with test data for users, teams, activities, leaderboard, and workouts'
