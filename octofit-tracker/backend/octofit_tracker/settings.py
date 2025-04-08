@@ -77,11 +77,19 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# Correct the database engine to use django
+# Update the database engine to use djongo for MongoDB
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Default Django database engine
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'octofit_db',  # Replace with your MongoDB database name
+        'ENFORCE_SCHEMA': True,  # Optional: Enforce schema validation
+        'CLIENT': {
+            'host': 'localhost',  # Replace with your MongoDB host
+            'port': 27017,        # Replace with your MongoDB port
+            'username': '',       # Optional: Add username if authentication is enabled
+            'password': '',       # Optional: Add password if authentication is enabled
+            'authSource': 'admin', # Optional: Authentication source database
+        },
     }
 }
 
